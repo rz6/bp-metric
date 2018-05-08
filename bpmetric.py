@@ -139,7 +139,9 @@ def BP(tads1,tads2,saveLocalBPscore=''):
         lbp.sort_values(['chromosome','start1','start2']).to_csv('{0}-localBP{1}'.format(p,ext),sep='\t',index=False)
     for c in set(o.chromosome):
         oc = o.loc[o.chromosome == c,]
-        L = (oc.end1-oc.start1).sum()
+        ostarts = oc[['start1','start2']].max(axis=1)
+        oends = oc[['end1','end2']].min(axis=1)
+        L = (oends - ostarts).sum()
         bpscore[c] = 1.0 - (oc.localScore * (oc.apply(lambda x: 1.0*min(x.end1,x.end2)-max(x.start1,x.start2),axis=1) / L)).sum()
     return bpscore
 
