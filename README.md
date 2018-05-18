@@ -10,7 +10,7 @@ This is a python based package for comparing chromosome segmentations, in partic
 * BP distance,
 * Variation of Information (VI) distance.
 
-In case of BP and VI distances it is also possible to keep local score and illustrate it for deeper insight into similarity of subchromosomal regions. The details of calculation and meaning of all mentioned distances is precisely disscussed in a paper. Here only information about scripts usage can be found.
+In case of BP and VI distances it is also possible to keep local score and illustrate it for deeper insight into similarity of subchromosomal regions. The details of calculation and meaning of all mentioned distances is precisely disscussed in a paper (https://www.biorxiv.org/content/early/2018/04/25/307330). Here only information about scripts usage can be found.
 
 ## Prerequisites ##
 -------------------
